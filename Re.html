@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- الكلمات المفتاحية والتعريف الأساسي لمحرك البحث جوجل -->
+<title>هبة محمد | خبيرة موديريشن مبيعات وتدريب فرق خدمة العملاء</title>
+
+<meta name="description" content="خبيرة Sales Moderator بخبرة +6 سنوات في مصر. أساعدك في زيادة مبيعات براندك، حل مشكلات العملاء، وتدريب الموديريتورز. تعلم الموديريشن وابدأ العمل الحر الآن!">
+<meta name="keywords" content="هبة محمد, موديريشن مبيعات, Sales Moderator, زيادة المبيعات, خدمة العملاء, كورس موديريشن, ZAmerican English, العمل الحر من المنزل, تدريب الموديريتورز, بهندلها وهي طايرة">
+<meta name="author" content="Heba Mohamed">
+<meta name="robots" content="index, follow">
+
+<!-- علامات ميتـا للأعمال والانتشار على منصات التواصل (Open Graph / Meta Business) -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="هبة محمد | Sales Moderator - نمو مبيعاتك وعلامتك التجارية">
+<meta property="og:description" content="مهندسة كيميائية خبيرة في مبيعات السوشيال ميديا (فيسبوك وإنستغرام) لأكثر من 6 سنوات. حلول ذكية للمشكلات وتدريب احترافي للأفراد والشركات. #بهندلها_وهي_طايرة">
+<meta property="og:image" content="رابط_صورة_هبة_الشخصية_الموجودة_في_السي_في">
+<meta property="og:url" content="رابط_موقع_أو_بروفايل_هبة_الرسمي">
+<meta property="og:site_name" content="Heba Mohamed Sales Consulting">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <meta name="description"
+    content="كوتش كونتنت ماركتنج لمساعدتك في بناء حضور رقمي قوي. خدماتنا تشمل: خطط محتوى شهرية، سكريبتات ريلز، كتابة محتوى بيعي وإعلاني، وزيادة الـ Organic Reach. احجز سيشنك الآن.">
+  <meta name="keywords"
+    content="كوتش محتوى، كونتنت ماركتنج، كتابة محتوى، سكريبتات ريلز، خطة محتوى، زيادة الأورجانيك ريتش، محتوى بيعي، إعلانات تسويقية، صناعة محتوى إبداعي، كورس كتابة محتوى، استشارات تسويقية، تحليل الجمهور، Content Marketing، Copywriting، Organic Reach.">
+  <meta name="author" content="ُEng: Radwa Mohamed">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="shortcut icon" href="imgs/logo_Habiba.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+<header class="main-header header-reveal">
+    <div class="container header-container">
+        <div class="logo">
+            <span class="logo-icon">H</span>
+            <span class="logo-text">Heba's <span class="gold-text">Sales Consulting</span></span>
+        </div>
+
+        <nav class="nav-menu" id="navMenu">
+            <a href="#" class="nav-link active">الرئيسية</a>
+            <a href="#" class="nav-link">من مين ؟</a>
+            <a href="#services" class="nav-link">الخدمات </a>
+            <a href="#services" class="nav-link"> الأعمال </a>
+            <a href="#system" class="nav-link">نظام العمل</a>
+            <a href="#journey" class="nav-link">رحلة الـ 7 سنوات</a>
+            <a href="#skills" class="nav-link">الشهادات </a>
+            <a href="#skills" class="nav-link">تواصل معي  </a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="#" class="btn btn-gold btn-glow">ابدأ استشارة الآن</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="تفعيل القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    const toggleIcon = menuToggle.querySelector('i');
+
+    // وظيفة فتح وإغلاق القائمة عند الضغط على زر الـ Hamburger
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation(); // منع إغلاق القائمة فورًا عند الضغط على الزر نفسه
+        navMenu.classList.toggle('mobile-open');
+        
+        // تغيير شكل الأيقونة بين القائمة (Bars) وعلامة الإغلاق (X)
+        if (navMenu.classList.contains('mobile-open')) {
+            toggleIcon.className = 'fas fa-times';
+        } else {
+            toggleIcon.className = 'fas fa-bars';
+        }
+    });
+
+    // إغلاق القائمة تلقائيًا عند الضغط على أي رابط بداخلها
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('mobile-open');
+            toggleIcon.className = 'fas fa-bars';
+            
+            // تحويل الكلاس Active للرابط الذي تم ضغطه
+            navLinks.forEach(nav => nav.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+
+    // إغلاق القائمة عند الضغط في أي مكان خارجها (على الشاشة)
+    document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+            navMenu.classList.remove('mobile-open');
+            toggleIcon.className = 'fas fa-bars';
+        }
+    });
+});
+    </script>
+
+</body>
+</html>
