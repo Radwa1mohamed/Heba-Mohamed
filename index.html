@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,600;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         * {
             margin: 0;
@@ -1478,7 +1479,7 @@
             z-index: 10;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
        
-       margin-top: 60px;
+       margin-top: 80px;
         }
 
         .ticker-wrap {
@@ -1526,6 +1527,450 @@
                 /* لتتناسب مع اتجاه rtl العربي */
             }
         }
+
+        /* ==========================================================================
+   1. قسم الأعمال الفاخر (Our Work / Portfolio)
+   ========================================================================== */
+.portfolio-section {
+    padding: 60px 0;
+    position: relative;
+    z-index: 5;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.portfolio-card {
+    background: rgba(19, 36, 25, 0.6);
+    border: 1px solid rgba(230, 203, 158, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold-primary);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(230, 203, 158, 0.05);
+}
+
+.portfolio-img-wrapper {
+    width: 100%;
+    height: 220px;
+    background: #09120b; /* خلفية مؤقتة للمعاينة */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(230, 203, 158, 0.1);
+}
+
+/* يمكنك استبدال الأيقونة بوسم <img> لاحقاً */
+.portfolio-img-wrapper i {
+    font-size: 3.5rem;
+    color: rgba(230, 203, 158, 0.2);
+    transition: all 0.4s ease;
+}
+
+.portfolio-card:hover .portfolio-img-wrapper i {
+    color: var(--gold-primary);
+    transform: scale(1.1);
+}
+
+.portfolio-info {
+    padding: 25px;
+}
+
+.portfolio-category {
+    font-size: 0.8rem;
+    color: var(--gold-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.portfolio-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-pure);
+    margin-bottom: 12px;
+}
+
+.portfolio-text {
+    font-size: 0.9rem;
+    color: var(--text-soft);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.portfolio-link {
+    color: var(--gold-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.3s;
+}
+
+.portfolio-link:hover {
+    color: var(--text-pure);
+}
+
+.portfolio-link:hover i {
+    transform: translateX(-5px); /* حركة السهم لليمين/اليسار اتجاه الـ RTL */
+}
+
+/* ==========================================================================
+   2. قسم نظام العمل الذكي (Workflow / Steps)
+   ========================================================================== */
+.process-section {
+    padding: 80px 0;
+    position: relative;
+    z-index: 5;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.process-card {
+    background: var(--bg-emerald-matte);
+    border: 1px solid rgba(230, 203, 158, 0.05);
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: center;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.process-card:hover {
+    border-color: rgba(230, 203, 158, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* الأرقام الكبيرة المضيئة خلفية لكل خطوة */
+.process-step-num {
+    font-size: 4.5rem;
+    font-weight: 900;
+    font-family: 'Playfair Display', serif;
+    color: rgba(230, 203, 158, 0.03);
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    line-height: 1;
+    transition: all 0.4s ease;
+}
+
+.process-card:hover .process-step-num {
+    color: rgba(230, 203, 158, 0.08);
+    transform: scale(1.1);
+}
+
+.process-icon-box {
+    width: 65px;
+    height: 65px;
+    background: rgba(230, 203, 158, 0.06);
+    color: var(--gold-primary);
+    border: 1px solid rgba(230, 203, 158, 0.15);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin: 0 auto 25px auto;
+    transition: all 0.4s ease;
+}
+
+.process-card:hover .process-icon-box {
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-darker));
+    color: var(--bg-deep-emerald);
+    box-shadow: 0 10px 20px rgba(230, 203, 158, 0.2);
+}
+
+.process-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-pure);
+    margin-bottom: 12px;
+}
+
+.process-desc {
+    font-size: 0.88rem;
+    color: var(--text-soft);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   3. التجاوب مع الشاشات (Responsive) للموبايل والتابلت
+   ========================================================================== */
+@media (max-width: 992px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* عمودين في التابلت */
+    }
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio-grid, .process-grid {
+        grid-template-columns: 1fr; /* عمود واحد تماماً في الموبايل */
+    }
+}
+
+/* ==========================================================================
+   1. قسم الشهادات وآراء العملاء (Testimonials & Certificates)
+   ========================================================================== */
+.testimonials-section {
+    padding: 60px 0;
+    position: relative;
+    z-index: 5;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonial-card {
+    background: rgba(19, 36, 25, 0.6);
+    border: 1px solid rgba(230, 203, 158, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold-primary);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.quote-icon {
+    font-size: 2rem;
+    color: rgba(230, 203, 158, 0.15);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.client-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid var(--gold-primary);
+    background: #132419; /* خلفية افتراضية */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-primary);
+}
+
+.client-details h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-pure);
+    margin-bottom: 4px;
+}
+
+.client-details span {
+    font-size: 0.8rem;
+    color: var(--gold-primary);
+}
+
+.testimonial-text {
+    font-size: 0.92rem;
+    color: var(--text-soft);
+    line-height: 1.7;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   2. قسم تواصل معي الفاخر (Contact Section)
+   ========================================================================== */
+.contact-section {
+    padding: 80px 0;
+    position: relative;
+    z-index: 5;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 50px;
+    background: var(--bg-emerald-matte);
+    border: 1px solid rgba(230, 203, 158, 0.1);
+    border-radius: 30px;
+    padding: 45px;
+    margin-top: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.contact-info-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-pure);
+    margin-bottom: 15px;
+}
+
+.contact-info-text {
+    font-size: 0.95rem;
+    color: var(--text-soft);
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.method-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.method-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(230, 203, 158, 0.06);
+    border: 1px solid rgba(230, 203, 158, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-primary);
+    font-size: 1.2rem;
+}
+
+.method-details h5 {
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    margin-bottom: 4px;
+}
+
+.method-details p {
+    font-size: 1rem;
+    color: var(--text-pure);
+    font-weight: 600;
+}
+
+/* نموذج المراسلة */
+.contact-form-side {
+    background: rgba(9, 18, 11, 0.5);
+    border: 1px solid rgba(230, 203, 158, 0.05);
+    padding: 35px;
+    border-radius: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--gold-primary);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    background: rgba(19, 36, 25, 0.8);
+    border: 1px solid rgba(230, 203, 158, 0.1);
+    border-radius: 10px;
+    padding: 12px 15px;
+    color: var(--text-pure);
+    font-size: 0.95rem;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 10px rgba(230, 203, 158, 0.1);
+}
+
+textarea.form-control {
+    resize: none;
+    height: 120px;
+}
+
+.submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-darker));
+    color: var(--bg-deep-emerald);
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(230, 203, 158, 0.25);
+}
+
+/* ==========================================================================
+   3. التجاوب (Responsive)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
     </style>
 </head>
 
@@ -1864,6 +2309,253 @@
             </div>
         </div>
     </section>
+
+
+    <!-- ========================================== -->
+<!-- 1. قسم معرض الأعمال (Portfolio Section) -->
+<!-- ========================================== -->
+<section id="portfolio" class="portfolio-section">
+    <div class="container">
+        
+        <!-- عنوان القسم المتناسق مع تصميمك الحالي -->
+        <div class="section-heading-wrapper">
+            <div class="line"></div>
+            <h2 class="section-main-title">أبرز الأعمال والنجاحات</h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="portfolio-grid">
+            
+            <!-- كرت العمل الأول -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-wrapper">
+                    <!-- يمكنك هنا وضع صور حقيقية لاحقاً باستخدام <img src="path.jpg" alt=""> -->
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="portfolio-info">
+                    <span class="portfolio-category">استشارات مبيعات</span>
+                    <h3 class="portfolio-title">هيكلة نموذج أرباح شركة X</h3>
+                    <p class="portfolio-text">مشروع متكامل تم من خلاله إعادة صياغة رحلة العميل وبناء استراتيجية بيع رفعت الأرباح بنسبة 300%.</p>
+                    <a href="#" class="portfolio-link">تفاصيل المشروع <i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+            </div>
+
+            <!-- كرت العمل الثاني -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-wrapper">
+                    <i class="fa-solid fa-users-gear"></i>
+                </div>
+                <div class="portfolio-info">
+                    <span class="portfolio-category">إدارة الـ Moderation</span>
+                    <h3 class="portfolio-title">قيادة وتدريب فريق مبيعات</h3>
+                    <p class="portfolio-text">بناء وقيادة فريق مكون من 20+ موديريتور محترف وتزويدهم بسيناريوهات رد مخصصة لغلق الصفقات.</p>
+                    <a href="#" class="portfolio-link">تفاصيل المشروع <i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+            </div>
+
+            <!-- كرت العمل الثالث -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-wrapper">
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+                <div class="portfolio-info">
+                    <span class="portfolio-category">تحويل المحادثات</span>
+                    <h3 class="portfolio-title">حملة قفل صفقات العقارات</h3>
+                    <p class="portfolio-text">تصميم رحلة الرد السريع والذكاء العاطفي في الردود، نتج عنها تحويل 40% من العملاء المحتملين لصفقات فعلية.</p>
+                    <a href="#" class="portfolio-link">تفاصيل المشروع <i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- 2. قسم نظام وآلية العمل (Process Section) -->
+<!-- ========================================== -->
+<section id="process" class="process-section">
+    <div class="container">
+        
+        <!-- عنوان القسم -->
+        <div class="section-heading-wrapper">
+            <div class="line"></div>
+            <h2 class="section-main-title">نظام وآلية العمل المتبعة</h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="process-grid">
+            
+            <!-- الخطوة الأولى -->
+            <div class="process-card">
+                <div class="process-step-num">01</div>
+                <div class="process-icon-box">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                </div>
+                <h3 class="process-title">1. التحليل المبدئي</h3>
+                <p class="process-desc">دراسة طبيعة عملك الحالي وفهم التحديات البيعية ونقاط الضعف في المحادثات بدقة.</p>
+            </div>
+
+            <!-- الخطوة الثانية -->
+            <div class="process-card">
+                <div class="process-step-num">02</div>
+                <div class="process-icon-box">
+                    <i class="fa-solid fa-chess-knight"></i>
+                </div>
+                <h3 class="process-title">2. رسم الاستراتيجية</h3>
+                <p class="process-desc">بناء خطة سيناريوهات (Scripts) مخصصة وهيكلة نموذج الأرباح الذي يناسب جمهورك المستهدف.</p>
+            </div>
+
+            <!-- الخطوة الثالثة -->
+            <div class="process-card">
+                <div class="process-step-num">03</div>
+                <div class="process-icon-box">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+                <h3 class="process-title">3. التدريب والتطبيق</h3>
+                <p class="process-desc">تأهيل الكوادر وتدريب فريق الـ Moderation على مهارات البيع الإقناعي وحل الاعتراضات.</p>
+            </div>
+
+            <!-- الخطوة الرابعة -->
+            <div class="process-card">
+                <div class="process-step-num">04</div>
+                <div class="process-icon-box">
+                    <i class="fa-solid fa-gauge-high"></i>
+                </div>
+                <h3 class="process-title">4. المتابعة والتحسين</h3>
+                <p class="process-desc">مراقبة حية للمعدلات التحويلية وتقديم تقارير دورية لضمان استدامة النمو والنمو الصافي للأرباح.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- 1. قسم الشهادات وآراء العملاء -->
+<!-- ========================================== -->
+<section id="testimonials" class="testimonials-section">
+    <div class="container">
+        
+        <div class="section-heading-wrapper">
+            <div class="line"></div>
+            <h2 class="section-main-title">شهادات ونجاحات نعتز بها</h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="testimonials-grid">
+            
+            <!-- رأي عميل 1 -->
+            <div class="testimonial-card">
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                <div class="client-info">
+                    <div class="client-img">
+                        <i class="fa-solid fa-user-tie fa-lg"></i>
+                    </div>
+                    <div class="client-details">
+                        <h4>أ/ أحمد الرويلي</h4>
+                        <span>الرئيس التنفيذي لشركة إرث</span>
+                    </div>
+                </div>
+                <p class="testimonial-text">"بفضل الله ثم استشارات هبة، تمكنا من إعادة تنظيم فريق الـ Moderation بالكامل وتطوير اسكريبتات بيعية مخصصة رفعت نسبة إغلاق الصفقات لدينا بشكل غير متوقع."</p>
+            </div>
+
+            <!-- رأي عميل 2 -->
+            <div class="testimonial-card">
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                <div class="client-info">
+                    <div class="client-img">
+                        <i class="fa-solid fa-user-ninja fa-lg"></i>
+                    </div>
+                    <div class="client-details">
+                        <h4>أ/ سارة المهندي</h4>
+                        <span>مؤسس براند زمرّد</span>
+                    </div>
+                </div>
+                <p class="testimonial-text">"هيكلة نموذج الأرباح التي قمنا بها غيرت نظرتنا تماماً لكيفية إدارة المبيعات والتسويق الرقمي. احترافية عالية جداً والتزام مبهر بالنتائج."</p>
+            </div>
+
+            <!-- رأي عميل 3 -->
+            <div class="testimonial-card">
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                <div class="client-info">
+                    <div class="client-img">
+                        <i class="fa-solid fa-user-astronaut fa-lg"></i>
+                    </div>
+                    <div class="client-details">
+                        <h4>أ/ خالد النمري</h4>
+                        <span>مدير قطاع المبيعات</span>
+                    </div>
+                </div>
+                <p class="testimonial-text">"التدريب العملي المكثف الذي حصل عليه كادر الردود لدينا ساهم في تقليل الهدر وتحويل المحادثات العادية إلى صفقات رابحة في زمن قياسي."</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- 2. قسم تواصل معي -->
+<!-- ========================================== -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        
+        <div class="section-heading-wrapper">
+            <div class="line"></div>
+            <h2 class="section-main-title">تواصل معي الآن</h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="contact-wrapper">
+            
+            <!-- الجانب الأيمن: معلومات التواصل -->
+            <div class="contact-info-side">
+                <h3 class="contact-info-title">لنبدأ رحلة نمو مبيعاتك اليوم</h3>
+                <p class="contact-info-text">هل أنت جاهز لتحويل محادثات عملائك المحتملين إلى أرباح حقيقية مستدامة؟ يسعدني تلقي استفسارك ومناقشة مشروعك القادم.</p>
+                
+                <div class="contact-methods">
+                    <!-- وسيلة الاتصال: البريد -->
+                    <div class="method-item">
+                        <div class="method-icon"><i class="fa-regular fa-envelope"></i></div>
+                        <div class="method-details">
+                            <h5>تواصل عبر البريد الإلكتروني</h5>
+                            <p>contact@hebamed.com</p>
+                        </div>
+                    </div>
+                    <!-- وسيلة الاتصال: الواتساب -->
+                    <div class="method-item">
+                        <div class="method-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="method-details">
+                            <h5>المحادثة المباشرة عبر الواتساب</h5>
+                            <p>+20 123 456 789</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الجانب الأيسر: فورم المراسلة -->
+            <div class="contact-form-side">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">الاسم الكريم</label>
+                        <input type="text" id="name" class="form-control" placeholder="أدخل اسمك بالكامل" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">تفاصيل استفسارك أو مشروعك</label>
+                        <textarea id="message" class="form-control" placeholder="اكتب هنا لمحة بسيطة عن طبيعة عملك والتحدي الذي تواجهه..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        إرسال الرسالة الآن <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
