@@ -134,29 +134,36 @@
         }
 
         /* --- HEADER NAVIGATION --- */
-     .main-header {
-            position: fixed; /* جعل الهيدر ثابتاً أثناء التمرير */
-            top: 20px; /* إبعاده عن الحافة العلوية ليصبح عائماً */
+        .main-header {
+            position: fixed;
+            /* جعل الهيدر ثابتاً أثناء التمرير */
+            top: 20px;
+            /* إبعاده عن الحافة العلوية ليصبح عائماً */
             left: 50%;
             transform: translateX(-50%);
             width: 90%;
             max-width: 1240px;
             padding: 15px 30px;
             z-index: 1000;
-            background: rgba(19, 36, 25, 0.7); /* خلفية زجاجية شبه شفافة */
-            backdrop-filter: blur(12px); /* تأثير الضباب الفخم */
+            background: rgba(19, 36, 25, 0.7);
+            /* خلفية زجاجية شبه شفافة */
+            backdrop-filter: blur(12px);
+            /* تأثير الضباب الفخم */
             -webkit-backdrop-filter: blur(12px);
-            border-radius: 20px; /* زوايا دائرية ليصبح كبطاقة منفصلة */
-            border: 1px solid rgba(230, 203, 158, 0.15); /* إطار ذهبي نحيف */
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 
-                        0 0 25px rgba(230, 203, 158, 0.03); /* نظام ظل مزدوج وعميق */
+            border-radius: 20px;
+            /* زوايا دائرية ليصبح كبطاقة منفصلة */
+            border: 1px solid rgba(230, 203, 158, 0.15);
+            /* إطار ذهبي نحيف */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6),
+                0 0 25px rgba(230, 203, 158, 0.03);
+            /* نظام ظل مزدوج وعميق */
             transition: all 0.4s ease;
         }
 
         .header-reveal {
             animation: headerLoad 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
             opacity: 0;
-            transform: translate(-50%, -20px); 
+            transform: translate(-50%, -20px);
         }
 
         @keyframes headerLoad {
@@ -172,12 +179,12 @@
             align-items: center;
             gap: 15px;
             position: relative;
-            width: 100%; 
+            width: 100%;
         }
 
         /* تنظيف الخلفيات والحدود القديمة من القائمة لأن الهيدر أصبح هو الصندوق العائم */
-      
-          .nav-menu {
+
+        .nav-menu {
             display: flex;
             gap: 25px;
             background: rgba(19, 36, 25, 0.4);
@@ -191,12 +198,12 @@
 
         /* تعويض مساحة الهيدر العائم في القسم الأول لكي لا يختفي المحتوى تحته */
         .hero-section {
-            padding: 140px 0 90px 0; 
+            padding: 140px 0 90px 0;
             position: relative;
             z-index: 5;
         }
 
-     
+
         .logo {
             display: flex;
             align-items: center;
@@ -230,7 +237,7 @@
             color: var(--gold-primary);
         }
 
-      
+
 
         .nav-link {
             color: var(--text-soft);
@@ -347,7 +354,7 @@
 
         /* --- HERO SECTION --- */
         .hero-section {
-            padding: 70px 0 90px 0;
+            padding: 90px 0 30px 0;
             position: relative;
             z-index: 5;
         }
@@ -640,7 +647,7 @@
             align-items: center;
             justify-content: center;
             gap: 20px;
-            margin: 80px 0 40px 0;
+            margin: 50px 0 40px 0;
         }
 
         .section-heading-wrapper .line {
@@ -742,14 +749,14 @@
 
         /* --- الشاشات المتوسطة والتابلت (تبدأ من 992 بكسل وأصغر) --- */
         @media (max-width: 992px) {
-           .main-header {
+            .main-header {
                 padding: 15px 20px;
-                top: 10px; 
+                top: 10px;
                 width: 95%;
                 overflow: visible !important;
             }
 
-     
+
             .nav-menu.mobile-open {
                 opacity: 1;
                 visibility: visible;
@@ -795,7 +802,7 @@
                 transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
             }
 
-        
+
 
             /* تنسيق روابط القائمة بداخل الـ Dropdown */
             .nav-link {
@@ -836,7 +843,7 @@
                 justify-content: space-between;
             }
 
- 
+
             .header-cta {
                 margin-right: auto;
                 margin-left: 15px;
@@ -880,7 +887,7 @@
             .grid-container {
                 grid-template-columns: repeat(2, 1fr);
             }
-       
+
             .logo-text {
                 font-size: 1.1rem;
             }
@@ -902,7 +909,7 @@
             .hero-actions {
                 display: flex;
                 flex-direction: column-reverse;
-                
+
                 /* ترتيب الأزرار فوق بعضها */
                 gap: 15px;
                 /* المسافة بين الزرين */
@@ -935,258 +942,590 @@
         }
 
         /* --- قسم الخط الزمني الفاخر --- */
-.about-timeline-section {
-    padding: 100px 0;
-    position: relative;
-    overflow: hidden;
-}
+        .about-timeline-section {
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
 
-/* تنسيق العناوين */
-.section-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
+        /* تنسيق العناوين */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
 
-.section-subtitle {
-    color: var(--gold-primary);
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
+        .section-subtitle {
+            color: var(--gold-primary);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
 
-.section-title {
-    font-size: 2.5rem;
-    font-family: 'Playfair Display', 'Cairo', serif;
-    color: var(--text-pure);
-    margin-bottom: 15px;
-}
+        .section-title {
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', 'Cairo', serif;
+            color: var(--text-pure);
+            margin-bottom: 15px;
+        }
 
-.gold-divider {
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
-    margin: 0 auto;
-}
+        .gold-divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+            margin: 0 auto;
+        }
 
-/* حاوية التايم لاين */
-.timeline-container {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
+        /* حاوية التايم لاين */
+        .timeline-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
 
-/* الخط الرأسي الذهبي المتوهج */
-.timeline-line {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 2px;
-    background: linear-gradient(to bottom, 
-        rgba(230, 203, 158, 0.1), 
-        var(--gold-primary) 50%, 
-        rgba(230, 203, 158, 0.1)
-    );
-    transform: translateX(-50%);
-    box-shadow: 0 0 15px rgba(230, 203, 158, 0.3);
-}
+        /* الخط الرأسي الذهبي المتوهج */
+        .timeline-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: linear-gradient(to bottom,
+                    rgba(230, 203, 158, 0.1),
+                    var(--gold-primary) 50%,
+                    rgba(230, 203, 158, 0.1));
+            transform: translateX(-50%);
+            box-shadow: 0 0 15px rgba(230, 203, 158, 0.3);
+        }
 
-/* عناصر الخط الزمني */
-.timeline-item {
-    position: relative;
-    width: 50%;
-    padding: 20px 40px;
-    box-sizing: border-box;
-}
+        /* عناصر الخط الزمني */
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            box-sizing: border-box;
+        }
 
-/* توزيع العناصر يمين ويسار بالتبادل */
-.timeline-item:nth-child(odd) {
-    margin-left: 50%;
-    margin-right: 0;
-}
+        /* توزيع العناصر يمين ويسار بالتبادل */
+        .timeline-item:nth-child(odd) {
+            margin-left: 50%;
+            margin-right: 0;
+        }
 
-.timeline-item:nth-child(even) {
-    margin-right: 50%;
-    margin-left: 0;
-}
+        .timeline-item:nth-child(even) {
+            margin-right: 50%;
+            margin-left: 0;
+        }
 
-/* النقاط المضيئة على الخط الزمني */
-.timeline-dot {
-    position: absolute;
-    top: 35px;
-    left: 50%;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: var(--bg-dark);
-    border: 3px solid var(--gold-primary);
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    box-shadow: 0 0 10px var(--gold-primary);
-    transition: all 0.3s ease;
-}
+        /* النقاط المضيئة على الخط الزمني */
+        .timeline-dot {
+            position: absolute;
+            top: 35px;
+            left: 50%;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--bg-dark);
+            border: 3px solid var(--gold-primary);
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            box-shadow: 0 0 10px var(--gold-primary);
+            transition: all 0.3s ease;
+        }
 
-.timeline-item:nth-child(even) .timeline-dot {
-    left: 0;
-}
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: 0;
+        }
 
-/* كروت الـ Glassmorphism الفاخرة */
-.timeline-content {
-    padding: 35px;
-    background: rgba(13, 29, 20, 0.4);
-    border: 1px solid rgba(230, 203, 158, 0.1);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-radius: 24px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border 0.4s ease;
-    direction: rtl;
-    text-align: right;
-}
+        /* كروت الـ Glassmorphism الفاخرة */
+        .timeline-content {
+            padding: 35px;
+            background: rgba(13, 29, 20, 0.4);
+            border: 1px solid rgba(230, 203, 158, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border 0.4s ease;
+            direction: rtl;
+            text-align: right;
+        }
 
-/* تأثير الـ Hover على الكروت */
-.timeline-item:hover .timeline-content {
-    transform: translateY(-5px);
-    border-color: rgba(230, 203, 158, 0.4);
-    box-shadow: 0 20px 40px rgba(230, 203, 158, 0.05);
-}
+        /* تأثير الـ Hover على الكروت */
+        .timeline-item:hover .timeline-content {
+            transform: translateY(-5px);
+            border-color: rgba(230, 203, 158, 0.4);
+            box-shadow: 0 20px 40px rgba(230, 203, 158, 0.05);
+        }
 
-.timeline-item:hover .timeline-dot {
-    background: var(--gold-primary);
-    scale: 1.2;
-}
+        .timeline-item:hover .timeline-dot {
+            background: var(--gold-primary);
+            scale: 1.2;
+        }
 
-/* الوسم التعريفي أعلى كل كرت */
-.timeline-tag {
-    display: inline-block;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--gold-primary);
-    margin-bottom: 15px;
-    background: rgba(230, 203, 158, 0.08);
-    padding: 5px 16px;
-    border-radius: 30px;
-    border: 1px solid rgba(230, 203, 158, 0.15);
-    letter-spacing: 0.5px;
-}
+        /* الوسم التعريفي أعلى كل كرت */
+        .timeline-tag {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+            margin-bottom: 15px;
+            background: rgba(230, 203, 158, 0.08);
+            padding: 5px 16px;
+            border-radius: 30px;
+            border: 1px solid rgba(230, 203, 158, 0.15);
+            letter-spacing: 0.5px;
+        }
 
-.timeline-content h3 {
-    font-size: 1.45rem;
-    color: var(--text-pure);
-    margin-bottom: 15px;
-}
+        .timeline-content h3 {
+            font-size: 1.45rem;
+            color: var(--text-pure);
+            margin-bottom: 15px;
+        }
 
-.timeline-content p {
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 0.98rem;
-    line-height: 1.8;
-}
+        .timeline-content p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.98rem;
+            line-height: 1.8;
+        }
 
-.timeline-content p strong {
-    color: var(--gold-primary);
-}
+        .timeline-content p strong {
+            color: var(--gold-primary);
+        }
 
-/* 🟢 تنسيق خاص بشبكة الأرقام داخل الكرت الثالث 🟢 */
-.stats-card {
-    width: 100% !important; /* تكبير كرت الأرقام قليلاً ليعطي فخامة ومساحة عرض مريحة */
-}
-.timeline-item:nth-child(odd) .stats-card {
-    margin-left: 0 !important; 
-}
-.about-stats-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 25px;
-}
+        /* 🟢 تنسيق خاص بشبكة الأرقام داخل الكرت الثالث 🟢 */
+        .stats-card {
+            width: 100% !important;
+            /* تكبير كرت الأرقام قليلاً ليعطي فخامة ومساحة عرض مريحة */
+        }
 
-.stat-box {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(230, 203, 158, 0.05);
-    padding: 20px;
-    border-radius: 16px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
+        .timeline-item:nth-child(odd) .stats-card {
+            margin-left: 0 !important;
+        }
 
-.stat-box:hover {
-    background: rgba(230, 203, 158, 0.04);
-    border-color: rgba(230, 203, 158, 0.15);
-}
+        .about-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
 
-.stat-number {
-    display: block;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--gold-primary);
-    margin-bottom: 5px;
-    text-shadow: 0 0 10px rgba(230, 203, 158, 0.2);
-}
+        .stat-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(230, 203, 158, 0.05);
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
 
-.stat-label {
-    display: block;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.85rem;
-}
+        .stat-box:hover {
+            background: rgba(230, 203, 158, 0.04);
+            border-color: rgba(230, 203, 158, 0.15);
+        }
 
-/* --- دعم شاشات الموبايل والتابلت (أقل من 768px) --- */
-@media (max-width: 768px) {
-   .timeline-line {
-        left: auto;
-        right: 20px; /* نقل الخط الزمني لليمين ليناسب اتجاه القراءة العربي */
-        transform: translateX(0);
-    }
+        .stat-number {
+            display: block;
+            font-family: 'Playfair Display', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(230, 203, 158, 0.2);
+        }
 
-    .timeline-item {
-        width: 100%;
-        padding-right: 45px;
-        padding-left: 20px;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-    .timeline-item:nth-child(odd), 
-    .timeline-item:nth-child(even) {
-        left: 0;
-    }
+        .stat-label {
+            display: block;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+        }
 
-    .timeline-dot {
-        left: auto !important;
-        right: 20px !important;
-        transform: translate(50%, -50%) !important;
-    }
-    
-    .stats-card {
-        width: 100% !important;
-        margin-left: 0 !important;
-    }
+        /* --- دعم شاشات الموبايل والتابلت (أقل من 768px) --- */
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: auto;
+                right: 20px;
+                /* نقل الخط الزمني لليمين ليناسب اتجاه القراءة العربي */
+                transform: translateX(0);
+            }
 
-    .about-stats-grid {
-        grid-template-columns: 1fr; /* جعل الأرقام رأسية على الموبايل لسهولة التصفح */
-        gap: 15px;
-    }
+            .timeline-item {
+                width: 100%;
+                padding-right: 45px;
+                padding-left: 20px;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
 
-    .section-title {
-        font-size: 2rem;
-    }
-}
-/* تجهيز عناصر التايم لاين للإنميشن */
-.timeline-item {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-dot {
+                left: auto !important;
+                right: 20px !important;
+                transform: translate(50%, -50%) !important;
+            }
+
+            .stats-card {
+                width: 100% !important;
+                margin-left: 0 !important;
+            }
+
+            .about-stats-grid {
+                grid-template-columns: 1fr;
+                /* جعل الأرقام رأسية على الموبايل لسهولة التصفح */
+                gap: 15px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* تجهيز عناصر التايم لاين للإنميشن */
+        .timeline-item {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1),
                 transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-}
+        }
 
-/* عند تفعيل الكلاس بواسطة الجافاسكريبت يتم التجميع والظهور */
-.timeline-item.animate-in {
-    opacity: 1;
-    transform: translateY(0);
+        /* عند تفعيل الكلاس بواسطة الجافاسكريبت يتم التجميع والظهور */
+        .timeline-item.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* --- BENTO GRID STYLE SECTION --- */
+        .about-bento-section {
+            padding: 160px 0 80px 0;
+            position: relative;
+            z-index: 5;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .bento-item {
+            background: rgba(19, 36, 25, 0.5);
+            border: 1px solid rgba(230, 203, 158, 0.08);
+            border-radius: 24px;
+            padding: 35px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .bento-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(230, 203, 158, 0.3);
+        }
+
+        /* كارت الهوية والقصة الرئيسي المدمج والمبتكر */
+        .bento-main {
+            grid-column: span 2;
+            grid-row: span 2;
+            background: linear-gradient(145deg, rgba(19, 36, 25, 0.85), rgba(12, 24, 16, 0.6));
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .bento-main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .bento-main-text {
+            flex: 1;
+        }
+
+        .bento-tag {
+            align-self: flex-start;
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+            background: rgba(230, 203, 158, 0.08);
+            padding: 6px 16px;
+            border-radius: 30px;
+            border: 1px solid rgba(230, 203, 158, 0.15);
+            margin-bottom: 15px;
+        }
+
+        .bento-main h3 {
+            font-size: 2rem;
+            color: var(--text-pure);
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        /* تعديل حجم الصورة وتصغيرها بشكل فخم داخل البوكس الكبير */
+        .bento-avatar-wrapper {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            flex-shrink: 0;
+        }
+
+        .bento-glowing-ring {
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, transparent, var(--gold-primary), transparent, var(--gold-darker), transparent);
+            animation: rotateRing 10s linear infinite;
+            opacity: 0.5;
+        }
+
+        .bento-avatar-mask {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            padding: 4px;
+            background: var(--bg-emerald-matte);
+            position: relative;
+            z-index: 2;
+        }
+
+        .bento-avatar {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        /* توزيع المحتوى المدمج (الرسالة والرواية) */
+        .bento-merged-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            border-top: 1px solid rgba(230, 203, 158, 0.1);
+            padding-top: 25px;
+        }
+
+        .content-block {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .content-block h4 {
+            font-size: 1.1rem;
+            color: var(--gold-primary);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .content-block p {
+            color: var(--text-soft);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* كارت الرؤية الاستراتيجية */
+        .bento-vision {
+            grid-column: span 1;
+        }
+
+        .bento-icon {
+            font-size: 1.8rem;
+            color: var(--gold-primary);
+            margin-bottom: 15px;
+        }
+
+        .bento-item h4 {
+            font-size: 1.2rem;
+            color: var(--text-pure);
+            margin-bottom: 10px;
+        }
+
+        /* كارت الأرقام والإحصائيات السريعة */
+        .bento-stats {
+            grid-column: span 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .bento-stat-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(230, 203, 158, 0.05);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 15px 5px;
+        }
+
+        .stat-num-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            direction: ltr;
+            /* لضمان ظهور الرموز بشكل سليم على الموبايل */
+        }
+
+        .bento-stat-num {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+            font-family: 'Playfair Display', sans-serif;
+        }
+
+        .stat-symbol {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+            font-family: 'Playfair Display', sans-serif;
+            margin-left: 2px;
+        }
+
+        .bento-stat-lbl {
+            font-size: 0.75rem;
+            color: var(--text-soft);
+            margin-top: 5px;
+        }
+
+        @keyframes rotateRing {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes floatingOrbs {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            100% {
+                transform: translate(40px, 50px) scale(1.1);
+            }
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 992px) {
+            .main-header {
+                padding: 15px 20px;
+                top: 10px;
+                width: 95%;
+            }
+
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bento-main {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .bento-merged-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .bento-main-header {
+                flex-direction: column-reverse;
+                align-items: center;
+                text-align: center;
+            }
+
+            .bento-tag {
+                align-self: center;
+            }
+
+            .bento-avatar-wrapper {
+                margin-bottom: 15px;
+            }
+        }
+
+        /* --- الشريط الإعلاني الفاخر المتحرك --- */
+        .ticker-banner {
+            width: 100%;
+            background: linear-gradient(95deg, var(--bg-emerald-matte), #1a3324);
+            border-top: 1px solid rgba(230, 203, 158, 0.2);
+            border-bottom: 1px solid rgba(230, 203, 158, 0.2);
+            padding: 14px 0;
+            overflow: hidden;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+       
+       margin-top: 60px;
+        }
+
+        .ticker-wrap {
+            display: flex;
+            width: max-content;
+        }
+
+        .ticker-content {
+            display: flex;
+            gap: 50px;
+            padding-left: 50px;
+            animation: marquee 25s linear infinite;
+        }
+
+        .ticker-item {
+            color: var(--gold-primary);
+            font-size: 1rem;
+            font-weight: 700;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .ticker-item i {
+            font-size: 0.8rem;
+            color: var(--gold-darker);
+            opacity: 0.8;
+        }
+
+        /* عندما تقفين بالماوس على الشريط، تتوقف الحركة */
+.ticker-banner:hover .ticker-content {
+    animation-play-state: paused;
+    cursor: pointer; /* اختياري: لتغيير شكل الماوس ليد عند الوقوف عليه */
 }
+        /* حركة الشريط السلسة والمستمرة */
+        @keyframes marquee {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(100%, 0, 0);
+                /* لتتناسب مع اتجاه rtl العربي */
+            }
+        }
     </style>
 </head>
 
@@ -1216,7 +1555,7 @@
         <div class="container header-container">
             <div class="logo">
                 <span class="logo-icon">H</span>
-                <span class="logo-text">هبة محمد  </span>
+                <span class="logo-text">هبة محمد </span>
             </div>
             <nav class="nav-menu" id="navMenu">
                 <a href="#" class="nav-link active">الرئيسية</a>
@@ -1235,6 +1574,8 @@
             </button>
         </div>
     </header>
+
+
 
     <section class="hero-section">
         <div class="container hero-container">
@@ -1311,75 +1652,219 @@
         </div>
     </section>
 
+    <!-- نهاية قسم الـ Hero الافتراضي لديكِ -->
+    </section>
 
-    <!-- ================= ABOUT TIMELINE SECTION ================= -->
-<section class="about-timeline-section">
-    <div class="container">
-        
-        <!-- عنوان القسم الرئيسي -->
-        <div class="section-header">
-            <span class="section-subtitle">تعرّف علينا</span>
-            <h2 class="section-title">من نحن وماذا نقدم</h2>
-            <div class="gold-divider"></div>
+    <!-- marquee التكرار هنا لضمان عدم حدوث فراغ أثناء الحركة المستمرة -->
+    <div class="ticker-banner">
+        <div class="ticker-wrap">
+            <div class="ticker-content">
+                <div class="ticker-item"><i class="fa-solid fa-star"></i> استشارات بيعية متكاملة</div>
+                <div class="ticker-item"><i class="fa-solid fa-star"></i> إدارة كواد الـ Moderation الاحترافي</div>
+                <div class="ticker-item"><i class="fa-solid fa-star"></i> زيادة مبيعات الشركات وأصحاب الأعمال</div>
+                <div class="ticker-item"><i class="fa-solid fa-star"></i> بناء استراتيجيات تسويقية ناجحة</div>
+                <div class="ticker-item"><i class="fa-solid fa-star"></i> تحويل المحادثات إلى صفقات رابحة</div>
+            </div>
+            <div class="ticker-content" aria-hidden="true">
+                <div class="ticker-item"><i class="fa-solid fa-star"></i> استشارات بيعية متكاملة</div>
+                <div class="ticker-item"><i class="fa-solid fa-star"></i> إدارة كواد الـ Moderation الاحترافي</div>
+                <div class="ticker-item"><i class="fa-solid fa-star"></i> زيادة مبيعات الشركات وأصحاب الأعمال</div>
+                <div class="ticker-item"><i class="fa-solid fa-star"></i> بناء استراتيجيات تسويقية ناجحة</div>
+                <div class="ticker-item"><i class="fa-solid fa-star"></i> تحويل المحادثات إلى صفقات رابحة</div>
+            </div>
         </div>
+    </div>
 
-        <!-- حاوية الخط الزمني -->
-        <div class="timeline-container">
-            <!-- الخط الرأسي المضيء -->
-            <div class="timeline-line"></div>
+    <!-- هنا يبدأ القسم القادم (تعرف علينا / من نحن وماذا نقدم) -->
 
-            <!-- المحطة الأولى: أنا مين؟ -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-tag">مَن نَحنُ؟</span>
-                    <h3>قصتنا وهويتنا</h3>
-                    <p>نحن مؤسسة إبداعية متخصصة في بناء وتطوير الهويات التجارية الفاخرة وإدارة الاستثمارات الرقمية. ننطلق من شغفنا بالتميز لنكون الشريك الاستراتيجي الأول للعلامات التجارية التي تطمح لترك بصمة استثنائية في السوق القيادي.</p>
-                </div>
+
+
+    <!--   -->
+    <!-- --- BENTO SECTION --- -->
+    <section class="about-bento-section">
+        <div class="container">
+            <!-- عنوان القسم الرئيسي -->
+            <div class="section-header">
+                <span class="section-subtitle">تعرّف علينا</span>
+                <h2 class="section-title">من نحن وماذا نقدم</h2>
+                <div class="gold-divider"></div>
             </div>
+            <div class="bento-grid">
 
-            <!-- المحطة الثانية: القيم والهدف -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-tag">رؤيتنا وقيمنا</span>
-                    <h3>الهدف والمبادئ التي تقودنا</h3>
-                    <p>هدفنا الأسمى هو تمكين الأعمال وتشكيل مستقبل واعد عبر الابتكار المستمر. ترتكز قيمنا على <strong>النزاهة، الجودة المطلقة، والتفكير الريادي</strong>، مما يضمن لشركائنا تجربة نمو مستدامة ومبنية على أسس متينة.</p>
-                </div>
-            </div>
+                <!-- البوكس الكبير المبتكر والمدمج -->
+                <div class="bento-item bento-main">
+                    <div class="bento-main-header">
+                        <div class="bento-main-text">
+                            <span class="bento-tag">القصة والمنهج</span>
+                            <h3>رحلة ممتدة من الشغف والتميز</h3>
+                            <p>نصنع الفارق في عالم المبيعات وإدارة الحوارات الرقمية، من خلال استراتيجيات مدروسة تُحيل
+                                النقرات إلى شراكات مستدامة والاهتمام المبدئي إلى ولاء حقيقي دائم.</p>
+                        </div>
 
-            <!-- المحطة الثالثة: الأرقام والبراندات -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content stats-card">
-                    <span class="timeline-tag">إنجازاتنا بالأرقام</span>
-                    <h3>أرقام حققناها وشراكات نعتز بها</h3>
-                    
-                    <!-- شبكة الأرقام والعدادات بداخل الكرت -->
-                    <div class="about-stats-grid">
-                        <div class="stat-box">
-                            <span class="stat-number">+15</span>
-                            <span class="stat-label">براند تجاري</span>
+                        <!-- الصورة بحجم أصغر وتصميم فخم متوهج -->
+                        <div class="bento-avatar-wrapper">
+                            <div class="bento-glowing-ring"></div>
+                            <div class="bento-avatar-mask">
+                                <img src="https://via.placeholder.com/150" alt="سلوى محمد" class="bento-avatar">
+                            </div>
                         </div>
-                        <div class="stat-box">
-                            <span class="stat-number">+120</span>
-                            <span class="stat-label">مشروع ناجح</span>
+                    </div>
+
+                    <!-- القسم الإبداعي المدمج: الرواية والرسالة -->
+                    <div class="bento-merged-content">
+                        <div class="content-block">
+                            <h4><i class="fas fa-book-open"></i> روايتنا</h4>
+                            <p>بدأت من الرغبة في سد الفجوة بين الشركات وعملائها، وتحويل الردود التقليدية إلى تجارب بيعية
+                                استشارية تُقنع العميل وتُعزز من قيمتك السوقية في كل محادثة.</p>
                         </div>
-                        <div class="stat-box">
-                            <span class="stat-number">98%</span>
-                            <span class="stat-label">رضا الشركاء</span>
-                        </div>
-                        <div class="stat-box">
-                            <span class="stat-number">+5M</span>
-                            <span class="stat-label">أرباح وتأثير</span>
+                        <div class="content-block">
+                            <h4><i class="fas fa-paper-plane"></i> رسالتنا</h4>
+                            <p>تمكين أصحاب الأعمال من مضاعفة مبيعاتهم من خلال إدارات احترافية ومودريشن ذكي، يركز على
+                                سيكولوجية المشتري ويوفر حلولاً بيعية متكاملة ومخصصة.</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- كارت الرؤية الاستراتيجية -->
+                <div class="bento-item bento-vision">
+                    <div class="bento-icon"><i class="fas fa-eye"></i></div>
+                    <h4>الرؤية الاستراتيجية</h4>
+                    <p>أن نكون الشريك الأول لكل علامة تجارية تطمح لصياغة معايير جديدة في خدمة العملاء وزيادة التحويلات
+                        البيعية بأعلى كفاءة احترافية.</p>
+                </div>
+
+                <!-- كارت الأرقام والإحصائيات المحدث والمعدل -->
+                <div class="bento-item bento-stats">
+                    <div class="bento-stat-box">
+                        <div class="stat-num-wrapper">
+                            <span class="bento-stat-num" data-target="7">0</span><span class="stat-symbol">+</span>
+                        </div>
+                        <span class="bento-stat-lbl">سنوات خبرة</span>
+                    </div>
+                    <div class="bento-stat-box">
+                        <div class="stat-num-wrapper">
+                            <span class="bento-stat-num" data-target="150">0</span><span class="stat-symbol">+</span>
+                        </div>
+                        <span class="bento-stat-lbl">مشروع ناجح</span>
+                    </div>
+                    <div class="bento-stat-box">
+                        <div class="stat-num-wrapper">
+                            <span class="bento-stat-num" data-target="98">0</span><span class="stat-symbol">%</span>
+                        </div>
+                        <span class="bento-stat-lbl">رضا العملاء</span>
+                    </div>
+                    <div class="bento-stat-box">
+                        <div class="stat-num-wrapper">
+                            <span class="bento-stat-num" data-target="3">0</span><span class="stat-symbol">x</span>
+                        </div>
+                        <span class="bento-stat-lbl">مضاعفة المبيعات</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- --- قسم الخط الزمني (رحلة الـ 7 سنوات) --- -->
+    <section class="about-timeline-section" id="timeline">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">التطور التاريخي</span>
+                <h2 class="section-title">رحلة الـ 7 سنوات</h2>
+                <div class="gold-divider"></div>
             </div>
 
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <!-- المحطة الأولى -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-tag">2019 - 2020</span>
+                        <h3>الإنطلاق والتأسيس</h3>
+                        <p>بدأت الرحلة بالتركيز على دراسة الأسواق وتحليل سلوك المستهلك الرقمي، وبناء النواة الأولى
+                            لإستراتيجيات البيع الفاخر.</p>
+                    </div>
+                </div>
+
+                <!-- المحطة الثانية -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-tag">2021 - 2022</span>
+                        <h3>التوسع وإدارة البراندات</h3>
+                        <p>إدارة وتوجيه أكثر من 15 علامة تجارية في الأسواق المحلية، ورفع كفاءة خدمات الـ Moderation
+                            والمبيعات المباشرة.</p>
+                    </div>
+                </div>
+
+                <!-- المحطة الثالثة -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-tag">2023 - 2024</span>
+                        <h3>الشراكات الإقليمية</h3>
+                        <p>عقد شراكات مع براندات كبرى وتطوير أنظمة مبيعات مؤتمتة ومقاومة لتغيرات السوق، وتحقيق قفزات
+                            ربحية استثنائية.</p>
+                    </div>
+                </div>
+
+                <!-- المحطة الرابعة -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-tag">2025 - 2026</span>
+                        <h3>القيادة الرقمية الكاملة</h3>
+                        <p>الوصول لمرحلة النضج الاستراتيجي وإطلاق خدمات بناء الهويات الفاخرة المتكاملة، مع تحقيق عوائد
+                            استثمارية قيادية ومستدامة للشركاء.</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- --- SERVICES SECTION --- -->
+    <section class="grid-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">ما نبرع فيه</span>
+                <h2 class="section-title">خدماتنا الاستراتيجية</h2>
+                <div class="gold-divider"></div>
+            </div>
+
+            <div class="grid-container">
+                <div class="premium-card">
+                    <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="card-title">استشارات المبيعات</h3>
+                    <p class="card-desc">نصمم مسارات ونماذج بيع مخصصة تضمن تحويل متصفحي منصاتك إلى عملاء دائمين.</p>
+                    <i class="fa-solid fa-arrow-left card-footer-arrow"></i>
+                </div>
+                <div class="premium-card">
+                    <div class="card-icon"><i class="fa-solid fa-users-gear"></i></div>
+                    <h3 class="card-title">إدارة الـ Moderation</h3>
+                    <p class="card-desc">بناء وتدريب فرق الرد السريع بأسلوب يجمع بين الراقية الإنسانية والذكاء البيعي
+                        المفترس.</p>
+                    <i class="fa-solid fa-arrow-left card-footer-arrow"></i>
+                </div>
+                <div class="premium-card">
+                    <div class="card-icon"><i class="fa-solid fa-gem"></i></div>
+                    <h3 class="card-title">تطوير الهويات الفاخرة</h3>
+                    <p class="card-desc">نصنع المظهر الفاخر المناسب لعرض خدماتك أو منتجاتك لتبدو الأعلى قيمة بالسوق.</p>
+                    <i class="fa-solid fa-arrow-left card-footer-arrow"></i>
+                </div>
+                <div class="premium-card">
+                    <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3 class="card-title">خطط التموضع السوقي</h3>
+                    <p class="card-desc">دراسة وتحليل المنافسين لضمان تفوقك عليهم وجعلك الاختيار الأول دائماً بلا منازع.
+                    </p>
+                    <i class="fa-solid fa-arrow-left card-footer-arrow"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
 
@@ -1489,35 +1974,76 @@
 
 
 
-       
-    document.addEventListener("DOMContentLoaded", function () {
-        // تحديد كل عناصر التايم لاين التي نريد تحريكها
-        const timelineItems = document.querySelectorAll('.timeline-item');
 
-        // إعدادات المراقب (تفعيل الأنميشن عندما يظهر 15% من الكرت في الشاشة)
-        const observerOptions = {
-            root: null,
-            threshold: 0.15,
-            rootMargin: "0px 0px -50px 0px"
-        };
+        document.addEventListener("DOMContentLoaded", function () {
+            // تحديد كل عناصر التايم لاين التي نريد تحريكها
+            const timelineItems = document.querySelectorAll('.timeline-item');
 
-        const timelineObserver = new IntersectionObserver(function (entries, observer) {
+            // إعدادات المراقب (تفعيل الأنميشن عندما يظهر 15% من الكرت في الشاشة)
+            const observerOptions = {
+                root: null,
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const timelineObserver = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // إضافة كلاس التجميع والظهور
+                        entry.target.classList.add('animate-in');
+                        // إلغاء مراقبة العنصر بعد ظهوره لعدم تكرار الإنميشن أثناء الصعود
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // البدء في مراقبة كل كرت
+            timelineItems.forEach(item => {
+                timelineObserver.observe(item);
+            });
+        });
+
+        // --- الكود الذكي لريفريش الأرقام (يعمل مرة واحدة فقط وثابت) ---
+        const statsCard = document.querySelector('.bento-stats');
+        let hasAnimated = false; // متغير لمنع تكرار الحركة والتصفير
+
+        const statsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // إضافة كلاس التجميع والظهور
-                    entry.target.classList.add('animate-in');
-                    // إلغاء مراقبة العنصر بعد ظهوره لعدم تكرار الإنميشن أثناء الصعود
-                    observer.unobserve(entry.target);
+                // إذا ظهر كارت الأرقام ولم يتم عمل الحركة له من قبل
+                if (entry.isIntersecting && !hasAnimated) {
+                    animateNumbers();
+                    hasAnimated = true; // نغير الحالة فوراً لكي لا تتصفر الأرقام أبداً مرة أخرى
+                    statsObserver.unobserve(entry.target); // إيقاف المراقبة تماماً للكارت بعد تشغيله لضمان الثبات
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.15 });
 
-        // البدء في مراقبة كل كرت
-        timelineItems.forEach(item => {
-            timelineObserver.observe(item);
-        });
-    });
+        if (statsCard) {
+            statsObserver.observe(statsCard);
+        }
 
+        // دالة الانيميشن السلس للأرقام
+        function animateNumbers() {
+            const stats = document.querySelectorAll('.bento-stat-num');
+            stats.forEach(stat => {
+                const target = +stat.getAttribute('data-target');
+                stat.innerText = "0"; // نبدأ من الصفر عند أول ظهور فقط
+
+                const updateCount = () => {
+                    const current = +stat.innerText;
+                    // حساب سرعة تصاعدية ناعمة وسريعة
+                    const increment = Math.ceil(target / 30);
+
+                    if (current < target) {
+                        stat.innerText = Math.min(current + increment, target);
+                        setTimeout(updateCount, 25); // سرعة التحديث بالملي ثانية
+                    } else {
+                        stat.innerText = target; // التأكيد على الوقوف عند الرقم النهائي المكتوب
+                    }
+                };
+                updateCount();
+            });
+        }
     </script>
 </body>
 
